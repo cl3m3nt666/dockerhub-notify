@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+ hooks:
+  build: .
+  volumes:
+   - $PWD/hooks:/etc/webhook
+  command: -verbose -hooks=/etc/webhook/hooks.json -hotreload
+  ports:
+    - 9000:9000
+  environment:
+    - TELE_USERID=
+    - TELE_TOKEN=

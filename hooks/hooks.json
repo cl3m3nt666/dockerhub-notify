@@ -1,0 +1,16 @@
+[
+  {
+    "id": "dockerhub",
+    "execute-command": "/etc/webhook/scripts/telegram.sh",
+    "pass-arguments-to-command": [
+     {
+       "source": "payload",
+       "name": "repository.repo_name"
+     },
+     {
+       "source": "payload",
+        "name": "repository.repo_url"
+    }
+    ]
+  }
+]
